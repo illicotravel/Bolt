@@ -1,7 +1,5 @@
 <?php namespace Bolt\Core;
 
-use \MongoCursor;
-
 /**
  * Bolt MongoDB QueryBuider
  *
@@ -46,7 +44,6 @@ use \MongoCursor;
      * @return  object $this 
      * @access  public
      */ public function save($options = array()) {  
-            var_dump($this->_entity);
             $this->dbCon->insert($this->_entity, $options);
         }
         
