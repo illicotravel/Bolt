@@ -11,20 +11,3 @@ spl_autoload_register(function($sClassName) {
         include __DIR__.'/'.$aRegs[1].'/'.$aRegs[2].'.php';
     }
 });
-
-function Filter($key = null) {
-	return new Filter($key);
-}
-
-function Collection($base, $collection) {
-	return new Collection($base, $collection);
-}
-
-function Entity($base, $collection, $datas = null, $Mongo = null) {
-	return new Entity($base, $collection, $datas, $Mongo);
-}	
-			
-$oFilter = Filter('emails.type')->equals('main');
-$aUsers  = Collection('Test', 'profile')->search($oFilter);
-
-var_dump(iterator_to_array($aUsers));
