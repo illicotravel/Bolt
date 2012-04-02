@@ -35,13 +35,13 @@ use \Mongo;
      * @return     void
      * @access    protected
      */ protected function __construct() {
-            $host = 'staff.mongohq.com';
-            $port = 10039;
-            $user = 'root';
-            $pass = 'azerty';
-			$base = 'Test';
-			
-			$this->dbCon = new Mongo("mongodb://{$host}:{$port}", array('username'=>$user, 'password'=>$pass, 'db'=>$base));
+            $host = 'localhost';
+            $port = 27017;
+            $user = 'username';
+            $pass = 'password';
+            $base = 'admin';
+            
+            $this->dbCon = new Mongo("mongodb://{$host}:{$port}", array('username'=>$user, 'password'=>$pass, 'db'=>$base));
         }
        
     /**

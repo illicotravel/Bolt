@@ -22,7 +22,7 @@
  * @version    version 1.0
  */ Class Collection {
     
-	/**
+    /**
      * Fields to return.
      * @var    array collection fields
      * @access private
@@ -45,15 +45,15 @@
      * @var    int skip
      * @access private
      */ private $skip = 0;
-	 
+     
     /**
      * Collection constructor
      * @param   array $aParams collection parameters
      * @return  none
      * @access  public
      */ public function __construct($base, $collection, $Mongo = null) {
-			$Mongo = isset($Mongo) ? $Mongo : Connection::getInstance();
-			$this->dbCon = $Mongo->$base->$collection;
+            $Mongo = isset($Mongo) ? $Mongo : Connection::getInstance();
+            $this->dbCon = $Mongo->$base->$collection;
         }
 
     /**
@@ -143,4 +143,4 @@
             $this->skip = $skip;
             return $this;
         }
-	}
+    }

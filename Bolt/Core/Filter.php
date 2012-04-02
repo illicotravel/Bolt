@@ -443,4 +443,4 @@
             $this->filter[$this->currentKey]['$type'] = 127;
             return $this;
         }
-	}
+    }
